@@ -1,20 +1,18 @@
 // Generated using https://github.com/a2x/cs2-dumper
 // 2026-08-13 21:19:20.450798 UTC
 
-#pragma once
+#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
-#include <cstddef>
-#include <cstdint>
-
-namespace cs2_dumper {
-    namespace schemas {
+pub mod cs2_dumper {
+    pub mod schemas {
         // Module: schemasystem.dll
         // Class count: 7
         // Enum count: 2
-        namespace schemasystem_dll {
+        pub mod schemasystem_dll {
             // Alignment: 1
             // Member count: 84
-            enum class fieldtype_t : uint8_t {
+            #[repr(u8)]
+            pub enum fieldtype_t {
                 FIELD_VOID = 0x0,
                 FIELD_FLOAT32 = 0x1,
                 FIELD_STRING = 0x2,
@@ -99,85 +97,86 @@ namespace cs2_dumper {
                 FIELD_NETWORK_QUANTIZED_VECTORWS = 0x51,
                 FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTORWS = 0x52,
                 FIELD_TYPECOUNT = 0x53
-            };
+            }
             // Alignment: 4
             // Member count: 3
-            enum class ThreeState_t : uint32_t {
+            #[repr(u32)]
+            pub enum ThreeState_t {
                 TRS_FALSE = 0x0,
                 TRS_TRUE = 0x1,
                 TRS_NONE = 0x2
-            };
+            }
             // Parent: None
             // Field count: 0
             //
             // Metadata:
             // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCResourceManifestInternal {
+            pub mod InfoForResourceTypeCResourceManifestInternal {
             }
             // Parent: None
             // Field count: 23
-            namespace CSchemaSystemInternalRegistration {
-                constexpr std::ptrdiff_t m_Vector2D = 0x0; // Vector2D
-                constexpr std::ptrdiff_t m_Vector = 0x8; // Vector
-                constexpr std::ptrdiff_t m_VectorWS = 0x14; // VectorWS
-                constexpr std::ptrdiff_t m_VectorAligned = 0x20; // VectorAligned
-                constexpr std::ptrdiff_t m_Quaternion = 0x30; // Quaternion
-                constexpr std::ptrdiff_t m_QAngle = 0x40; // QAngle
-                constexpr std::ptrdiff_t m_RotationVector = 0x4C; // RotationVector
-                constexpr std::ptrdiff_t m_RadianEuler = 0x58; // RadianEuler
-                constexpr std::ptrdiff_t m_DegreeEuler = 0x64; // DegreeEuler
-                constexpr std::ptrdiff_t m_QuaternionStorage = 0x70; // QuaternionStorage
-                constexpr std::ptrdiff_t m_matrix3x4_t = 0x80; // matrix3x4_t
-                constexpr std::ptrdiff_t m_matrix3x4a_t = 0xB0; // matrix3x4a_t
-                constexpr std::ptrdiff_t m_Color = 0xE0; // Color
-                constexpr std::ptrdiff_t m_Vector4D = 0xE4; // Vector4D
-                constexpr std::ptrdiff_t m_CTransform = 0x100; // CTransform
-                constexpr std::ptrdiff_t m_pKeyValues = 0x120; // KeyValues*
-                constexpr std::ptrdiff_t m_CUtlBinaryBlock = 0x128; // CUtlBinaryBlock
-                constexpr std::ptrdiff_t m_CUtlString = 0x138; // CUtlString
-                constexpr std::ptrdiff_t m_CUtlSymbol = 0x140; // CUtlSymbol
-                constexpr std::ptrdiff_t m_stringToken = 0x144; // CUtlStringToken
-                constexpr std::ptrdiff_t m_stringTokenWithStorage = 0x148; // CUtlStringTokenWithStorage
-                constexpr std::ptrdiff_t m_ResourceTypes = 0x160; // CResourceArray<CResourcePointer<CResourceString>>
-                constexpr std::ptrdiff_t m_KV3 = 0x168; // KeyValues3
+            pub mod CSchemaSystemInternalRegistration {
+                pub const m_Vector2D: usize = 0x0; // Vector2D
+                pub const m_Vector: usize = 0x8; // Vector
+                pub const m_VectorWS: usize = 0x14; // VectorWS
+                pub const m_VectorAligned: usize = 0x20; // VectorAligned
+                pub const m_Quaternion: usize = 0x30; // Quaternion
+                pub const m_QAngle: usize = 0x40; // QAngle
+                pub const m_RotationVector: usize = 0x4C; // RotationVector
+                pub const m_RadianEuler: usize = 0x58; // RadianEuler
+                pub const m_DegreeEuler: usize = 0x64; // DegreeEuler
+                pub const m_QuaternionStorage: usize = 0x70; // QuaternionStorage
+                pub const m_matrix3x4_t: usize = 0x80; // matrix3x4_t
+                pub const m_matrix3x4a_t: usize = 0xB0; // matrix3x4a_t
+                pub const m_Color: usize = 0xE0; // Color
+                pub const m_Vector4D: usize = 0xE4; // Vector4D
+                pub const m_CTransform: usize = 0x100; // CTransform
+                pub const m_pKeyValues: usize = 0x120; // KeyValues*
+                pub const m_CUtlBinaryBlock: usize = 0x128; // CUtlBinaryBlock
+                pub const m_CUtlString: usize = 0x138; // CUtlString
+                pub const m_CUtlSymbol: usize = 0x140; // CUtlSymbol
+                pub const m_stringToken: usize = 0x144; // CUtlStringToken
+                pub const m_stringTokenWithStorage: usize = 0x148; // CUtlStringTokenWithStorage
+                pub const m_ResourceTypes: usize = 0x160; // CResourceArray<CResourcePointer<CResourceString>>
+                pub const m_KV3: usize = 0x168; // KeyValues3
             }
             // Parent: None
             // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            namespace CExampleSchemaVData_PolymorphicDerivedA {
-                constexpr std::ptrdiff_t m_nDerivedA = 0x10; // int32
+            pub mod CExampleSchemaVData_PolymorphicDerivedA {
+                pub const m_nDerivedA: usize = 0x10; // int32
             }
             // Parent: None
             // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            namespace CExampleSchemaVData_PolymorphicBase {
-                constexpr std::ptrdiff_t m_nBase = 0x8; // int32
+            pub mod CExampleSchemaVData_PolymorphicBase {
+                pub const m_nBase: usize = 0x8; // int32
             }
             // Parent: None
             // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            namespace CExampleSchemaVData_PolymorphicDerivedB {
-                constexpr std::ptrdiff_t m_nDerivedB = 0x10; // int32
+            pub mod CExampleSchemaVData_PolymorphicDerivedB {
+                pub const m_nDerivedB: usize = 0x10; // int32
             }
             // Parent: None
             // Field count: 1
-            namespace ResourceId_t {
-                constexpr std::ptrdiff_t m_Value = 0x0; // uint64
+            pub mod ResourceId_t {
+                pub const m_Value: usize = 0x0; // uint64
             }
             // Parent: None
             // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            namespace CExampleSchemaVData_Monomorphic {
-                constexpr std::ptrdiff_t m_nExample1 = 0x0; // int32
-                constexpr std::ptrdiff_t m_nExample2 = 0x4; // int32
+            pub mod CExampleSchemaVData_Monomorphic {
+                pub const m_nExample1: usize = 0x0; // int32
+                pub const m_nExample2: usize = 0x4; // int32
             }
         }
     }
